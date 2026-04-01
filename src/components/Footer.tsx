@@ -130,13 +130,13 @@ const Footer = () => {
             <span className="text-[9px] uppercase tracking-widest text-white/20 font-bold">
               Crafted by
             </span>
-            <span className="text-[11px] font-serif italic text-white/60">
+            <span className="text-xs font-serif italic text-white/80">
               Truvixoo
             </span>
           </div>
         </div>
 
-        <div className="mt-16 text-[10px] text-white/10 font-sans font-light leading-relaxed max-w-4xl border-t border-white/5 pt-10 text-center mx-auto letter-spacing-[0.05em]">
+        <div className="mt-16 text-[10px] text-white/50 font-sans font-light leading-relaxed max-w-4xl border-t border-white/5 pt-10 text-center mx-auto letter-spacing-[0.05em]">
           Disclaimer: Visual representations are for illustrative purposes. All
           projects are RERA registered. Please verify verified documentation on
           the official RERA portal. Architecture and availability are subject to

@@ -107,9 +107,9 @@ export default function InquiryPage() {
           {/* Inquiry Form */}
           <div className="bg-stone shadow-[0_20px_80px_rgba(45,42,38,0.1)] p-10 lg:p-10 border border-gold/10 relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 blur-[80px]" />
-            <h3 className="text-3xl font-serif text-beige mb-12">
+            <h3 className="text-4xl font-serif text-beige mb-10">
               Inquiry{" "}
-              <span className="italic opacity-40 text-gold">Sanctuary.</span>
+              <span className="italic opacity-80 text-gold">Sanctuary.</span>
             </h3>
             <form className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
