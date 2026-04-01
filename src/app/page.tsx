@@ -1,23 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 import Ecosystem from "@/components/Ecosystem";
+import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
 import StatsCounter from "@/components/StatsCounter";
-import Footer from "@/components/Footer";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Filter,
-  CheckCircle2,
-  Leaf,
-  Heart,
-  Shield,
-  Sparkles,
-} from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { Heart, Leaf, Shield, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const projects = [
   {
@@ -82,7 +73,6 @@ export default function Home() {
 
   return (
     <div className="bg-beige min-h-screen mandala-bg">
-      <Navbar />
       <Hero />
 
       {/* Philosophy Section */}
@@ -286,8 +276,6 @@ export default function Home() {
           <button className="serene-button">Arrange a Consultation</button>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

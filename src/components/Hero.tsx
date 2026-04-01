@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 
 const slides = [
   {
@@ -16,7 +16,8 @@ const slides = [
         <span className="italic text-gold">of Serenity.</span>
       </>
     ),
-    description: "Crafting spaces that embody simplicity, purity, and peace. A vision of luxury rooted in timeless cultural values.",
+    description:
+      "Crafting spaces that embody simplicity, purity, and peace. A vision of luxury rooted in timeless cultural values.",
   },
   {
     id: 2,
@@ -28,7 +29,8 @@ const slides = [
         <span className="italic text-gold">in Every Line.</span>
       </>
     ),
-    description: "Where contemporary design meets natural harmony. Experience the tranquility of light, space, and nature.",
+    description:
+      "Where contemporary design meets natural harmony. Experience the tranquility of light, space, and nature.",
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ const slides = [
         <span className="italic text-gold">of the Soul.</span>
       </>
     ),
-    description: "Exquisite interiors designed for quiet reflection. Every detail curated to elevate your everyday living experience.",
+    description:
+      "Exquisite interiors designed for quiet reflection. Every detail curated to elevate your everyday living experience.",
   },
 ];
 
@@ -108,11 +111,11 @@ const Hero = () => {
             }}
             className="absolute inset-0"
           >
-            <motion.div 
-               initial={{ scale: 1.15 }}
-               animate={{ scale: 1 }}
-               transition={{ duration: 7, ease: "easeOut" }}
-               className="w-full h-full"
+            <motion.div
+              initial={{ scale: 1.15 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 7, ease: "easeOut" }}
+              className="w-full h-full"
             >
               <img
                 src={slides[currentSlide].image}
@@ -130,7 +133,7 @@ const Hero = () => {
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={currentSlide}
             variants={contentVariants}
             initial="enter"
@@ -138,7 +141,7 @@ const Hero = () => {
             exit="exit"
             transition={{
               duration: 1.2,
-              ease: [0.22, 1, 0.36, 1]
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="mb-8 inline-flex items-center gap-4 bg-white/20 backdrop-blur-2xl px-6 py-2 rounded-none border border-white/20">
@@ -179,18 +182,24 @@ const Hero = () => {
             }}
             className="group relative flex items-center justify-end"
           >
-            <span className={cn(
-              "absolute right-10 text-[11px] font-sans font-bold uppercase tracking-widest text-white transition-all duration-500 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0",
-              currentSlide === index && "opacity-100 translate-x-0 text-gold"
-            )}>
+            <span
+              className={cn(
+                "absolute right-10 text-[11px] font-sans font-bold uppercase tracking-widest text-white transition-all duration-500 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0",
+                currentSlide === index && "opacity-100 translate-x-0 text-gold",
+              )}
+            >
               0{index + 1}
             </span>
-            <div className={cn(
-              "w-0.5 h-10 bg-white/20 transition-all duration-700 rounded-full overflow-hidden relative",
-              currentSlide === index ? "bg-white/40 h-16 w-1" : "group-hover:bg-white/40"
-            )}>
+            <div
+              className={cn(
+                "w-0.5 h-10 bg-white/20 transition-all duration-700 rounded-full overflow-hidden relative",
+                currentSlide === index
+                  ? "bg-white/40 h-16 w-1"
+                  : "group-hover:bg-white/40",
+              )}
+            >
               {currentSlide === index && (
-                <motion.div 
+                <motion.div
                   initial={{ height: "0%" }}
                   animate={{ height: "100%" }}
                   transition={{ duration: 5, ease: "linear" }}
@@ -209,7 +218,9 @@ const Hero = () => {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20"
       >
-        <span className="text-[10px] text-white/60 uppercase tracking-[0.4em] font-medium vertical-text">Scroll</span>
+        <span className="text-[10px] text-white/60 uppercase tracking-[0.4em] font-medium vertical-text">
+          Scroll
+        </span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -230,5 +241,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-

@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -46,7 +44,6 @@ const projectItems = [
 export default function ProjectsPage() {
   return (
     <div className="bg-white min-h-screen mandala-bg">
-      <Navbar />
       <PageHeader 
         title="Sanctuary Collection" 
         subtitle="A curated portfolio of masterworks that embody our vision of purity, peace, and timeless elegance."
@@ -108,7 +105,6 @@ export default function ProjectsPage() {
          </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import {
-  MessageCircle,
+  ArrowUpRight,
   Camera,
   Globe,
   Mail,
+  MessageCircle,
   Phone,
-  ArrowUpRight,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
