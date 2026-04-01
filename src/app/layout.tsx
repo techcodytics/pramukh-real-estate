@@ -19,18 +19,30 @@ const serif = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Pramukh Group | Architecture of Serenity | Premium Real Estate Builder",
+  title: "Pramukh Group | Architecture of Serenity | Premium Real Estate Builder",
   description:
-    "Official website of Pramukh Group, a leading real estate builder in Surat, Vapi, and Silvassa. Experience the harmony of simplicity, purity, and excellence.",
+    "Discover the Architecture of Serenity with Pramukh Group. A vision of luxury rooted in simplicity, purity, and timeless excellence. Explore our masterworks across Ahmedabad and Gandhinagar.",
   keywords: [
     "Pramukh Group",
     "Architecture of Peace",
     "Real Estate Surat",
-    "Builder Vapi",
-    "Luxury Flats Surat",
+    "Builder Ahmedabad",
+    "Luxury Flats Gandhinagar",
     "Serene Living",
+    "Premium Real Estate",
   ],
+  openGraph: {
+    title: "Pramukh Group | Architecture of Serenity",
+    description: "Experience modern luxury rooted in timeless purity. Discover our premium sanctuaries in Ahmedabad and Gandhinagar.",
+    type: "website",
+    siteName: "Pramukh Group",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pramukh Group | Architecture of Serenity",
+    description: "Discover premium living spaces that embody peace and excellence.",
+  },
 };
 
 export default function RootLayout({
