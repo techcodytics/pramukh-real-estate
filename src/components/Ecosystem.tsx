@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Building2, Sofa, ReceiptText, School, Cpu, Globe, LucideIcon } from "lucide-react";
+import { Building2, Sofa, ReceiptText, School, Cpu, Globe, LucideIcon, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface EcosystemItem {
@@ -15,38 +15,38 @@ interface EcosystemItem {
 
 const ecosystems: EcosystemItem[] = [
   {
-    title: "Real Estate",
+    title: "Sanctuaries",
     description: "Environments shaped for living, from luxury high-rises to sprawling estates.",
     Icon: Building2,
-    link: "#projects",
+    link: "/real-estate",
     bg: "bg-white",
   },
   {
-    title: "Furniture",
+    title: "Interiors",
     description: "Spaces perfected through thoughtful design and curated furniture.",
     Icon: Sofa,
     link: "#",
-    bg: "bg-neutral-50",
+    bg: "bg-white",
   },
   {
-    title: "Fund",
+    title: "Legacy",
     description: "Investing with lasting discipline to create wealth for generations.",
     Icon: ReceiptText,
     link: "#",
     bg: "bg-white",
   },
   {
-    title: "Institute",
+    title: "Academy",
     description: "Shaping leaders in real estate through world-class education.",
     Icon: School,
-    link: "#",
-    bg: "bg-neutral-50",
+    link: "/ecosystem",
+    bg: "bg-white",
   },
 ];
 
 const Ecosystem = () => {
   return (
-    <section id="ecosystem" className="bg-white border-y border-neutral-100">
+    <section id="ecosystem" className="bg-white border-y border-stone/5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 group">
         {ecosystems.map((item, index) => (
           <motion.div
@@ -54,44 +54,46 @@ const Ecosystem = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.8 }}
+            transition={{ delay: index * 0.1, duration: 1 }}
             className={cn(
-              "relative p-12 lg:p-16 h-[400px] flex flex-col justify-between border-r border-neutral-100 last:border-r-0 transition-colors duration-500 hover:bg-navy hover:text-white group/item",
+              "relative p-14 lg:p-20 h-[450px] flex flex-col justify-between border-r border-stone/5 last:border-r-0 transition-all duration-1000 hover:bg-stone group/item hover:z-10",
               item.bg
             )}
           >
             <div>
-              <div className="w-12 h-12 mb-8 text-gold flex items-center justify-center group-hover/item:text-white transition-colors duration-500">
-                <item.Icon size={36} strokeWidth={1.5} />
+              <div className="w-16 h-16 mb-10 text-gold flex items-center justify-center group-hover/item:text-gold/60 transition-colors duration-700">
+                <item.Icon size={40} strokeWidth={1} />
               </div>
-              <h3 className="text-2xl font-display font-black uppercase tracking-tight mb-4 transition-colors duration-500 group-hover/item:text-white">
+              <h3 className="text-3xl font-serif font-medium text-stone mb-6 transition-colors duration-700 group-hover/item:text-beige">
                 {item.title}
               </h3>
-              <p className="text-sm font-display font-medium text-neutral-500 leading-relaxed border-l-2 border-gold pl-4 transition-colors duration-500 group-hover/item:text-white/60">
+              <p className="text-sm font-sans font-light text-stone/40 leading-relaxed border-l border-gold/30 pl-6 transition-colors duration-700 group-hover/item:text-beige/60">
                 {item.description}
               </p>
             </div>
             
             <a 
               href={item.link} 
-              className="inline-flex items-center gap-2 text-[10px] font-display font-black uppercase tracking-[0.25em] text-navy group-hover/item:text-gold transition-colors duration-500"
+              className="inline-flex items-center gap-4 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-stone group-hover/item:text-gold transition-colors duration-700 mt-10"
             >
-              Know More <span className="w-8 h-[1px] bg-navy group-hover/item:bg-gold transition-colors duration-500" />
+              Learn More <ArrowRight size={14} className="group-hover/item:translate-x-2 transition-transform duration-700" />
             </a>
           </motion.div>
         ))}
       </div>
 
-      <div className="bg-navy p-6 flex flex-col md:flex-row items-center justify-between gap-6 px-12 lg:px-16">
-        <div className="flex items-center gap-4">
-           <Cpu size={24} className="text-gold" />
+      <div className="bg-stone p-10 flex flex-col md:flex-row items-center justify-between gap-8 px-14 lg:px-24">
+        <div className="flex items-center gap-6">
+           <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+              <Cpu size={24} strokeWidth={1.5} />
+           </div>
            <div className="flex flex-col">
-             <span className="text-[10px] text-white/40 uppercase tracking-widest font-black">PropTech Ecosystem</span>
-             <span className="text-sm text-white font-display font-bold">Simplifying Real Estate, intelligently.</span>
+             <span className="text-[10px] text-white/30 uppercase tracking-[0.4em] font-bold mb-1">PropTech Ecosystem</span>
+             <span className="text-lg text-beige/80 font-serif italic">Simplifying Real Estate through Intelligence.</span>
            </div>
         </div>
-        <button className="flex items-center gap-2 text-[10px] text-gold uppercase tracking-[0.2em] font-black group">
-           Explore RealEstateOS <Globe size={14} className="group-hover:rotate-12 transition-transform" />
+        <button className="flex items-center gap-3 text-[11px] text-gold uppercase tracking-[0.2em] font-bold group bg-white/5 py-3 px-8 hover:bg-white/10 transition-colors">
+           Explore RealEstateOS <Globe size={16} strokeWidth={1} className="group-hover:rotate-45 transition-transform duration-700" />
         </button>
       </div>
     </section>

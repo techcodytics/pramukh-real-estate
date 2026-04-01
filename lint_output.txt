@@ -1,0 +1,57 @@
+
+> pramukh-real-estate@0.1.0 lint
+> eslint
+
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/contact/page.tsx
+    7:10  warning  'motion' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   27:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  135:10  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/ecosystem/page.tsx
+    8:53   warning  'Globe' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   73:18   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  122:19   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  122:179  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/page.tsx
+   11:10  warning  'Filter' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   11:18  warning  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  180:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/projects/[id]/page.tsx
+  9:10  warning  'cn' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/real-estate/page.tsx
+    8:45  warning  'ChevronDown' is defined but never used                          @typescript-eslint/no-unused-vars
+    9:10  warning  'cn' is defined but never used                                   @typescript-eslint/no-unused-vars
+   10:10  warning  'motion' is defined but never used                               @typescript-eslint/no-unused-vars
+  168:99  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/app/sustainability/page.tsx
+   8:16   warning  'Sun' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   8:21   warning  'Droplets' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   8:58   warning  'TreePine' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   8:68   warning  'Recycle' is defined but never used                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+   9:10   warning  'cn' is defined but never used                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  56:17   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  78:20   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  78:200  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/components/Footer.tsx
+  24:15  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  25:69  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/components/Hero.tsx
+   6:10  warning  'cn' is defined but never used                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  18:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/components/Navbar.tsx
+  6:19  warning  'ArrowUpRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/aniket90/Desktop/Jay/pramukh-real-estate/src/components/ProjectCard.tsx
+   7:10  warning  'cn' is defined but never used    @typescript-eslint/no-unused-vars
+  28:3   warning  'rera' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 30 problems (8 errors, 22 warnings)
+

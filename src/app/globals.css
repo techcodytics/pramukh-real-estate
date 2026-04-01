@@ -1,66 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #0F172A;
+  --background: #FAF7F2;
+  --foreground: #2D2A26;
   
-  /* Pramukh-Inspired Palette */
-  --brand-navy: #0F172A;
-  --brand-gold: #B89552;
-  --brand-silver: #E2E8F0;
-  --brand-gray: #F8FAFC;
+  /* Serene & Spiritual Palette - Swaminarayan Inspired */
+  --brand-saffron: #F4A261;
+  --brand-saffron-soft: #FBEDE2;
+  --brand-beige: #FAF7F2;
+  --brand-gold: #C5A059;
+  --brand-earth: #8D6E63;
+  --brand-stone: #4A4540;
   
-  /* Neutral scale - Pramukh style (lighter, more breathable) */
-  --neutral-50: #F9FAFB;
-  --neutral-100: #F3F4F6;
-  --neutral-200: #E5E7EB;
-  --neutral-300: #D1D5DB;
-  --neutral-400: #9CA3AF;
-  --neutral-500: #6B7280;
-  --neutral-600: #4B5563;
-  --neutral-700: #374151;
-  --neutral-800: #111827;
-  --neutral-900: #030712;
+  /* Neutral scale - Warm & Earthy */
+  --neutral-50: #FDFCFB;
+  --neutral-100: #F7F5F2;
+  --neutral-200: #EZECE5;
+  --neutral-300: #D8D2CB;
+  --neutral-400: #A8A095;
+  --neutral-500: #7D756B;
+  --neutral-600: #5D564F;
+  --neutral-700: #4A4540;
+  --neutral-800: #2D2A26;
+  --neutral-900: #1A1816;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: var(--brand-navy);
+  --color-saffron: var(--brand-saffron);
+  --color-saffron-soft: var(--brand-saffron-soft);
+  --color-beige: var(--brand-beige);
   --color-gold: var(--brand-gold);
-  --color-silver: var(--brand-silver);
-  --color-gray-light: var(--brand-gray);
+  --color-earth: var(--brand-earth);
+  --color-stone: var(--brand-stone);
   
-  --font-display: var(--font-manrope);
-  --font-sans: var(--font-inter);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
   
-  /* Spacing & Transitions - Pramukh Focus (smooth, ample) */
+  /* Spacing & Transitions - Balanced & Peaceful */
   --spacing-128: 32rem;
-  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-serene: cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 @layer base {
   body {
-    @apply bg-white text-navy font-sans antialiased;
+    @apply bg-beige text-stone font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold tracking-tight;
+    @apply font-serif font-medium tracking-normal;
   }
 }
 
-/* Pramukh-Style Components */
+/* Serene Components */
 .glass-header {
-  @apply bg-white/70 backdrop-blur-xl border-b border-neutral-100;
+  @apply bg-beige/80 backdrop-blur-2xl border-b border-stone/5;
 }
 
-.luxury-button {
-  @apply bg-navy text-white px-8 py-3 rounded-none font-display font-medium text-xs uppercase tracking-widest transition-all duration-300 hover:bg-gold active:scale-95;
+.serene-button {
+  @apply bg-stone text-beige px-10 py-4 rounded-none font-serif font-medium text-sm tracking-widest transition-all duration-700 hover:bg-gold active:scale-95;
 }
 
-.minimal-card {
-  @apply bg-white border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-500;
+.airy-card {
+  @apply bg-white border border-stone/5 shadow-[0_10px_40px_rgba(74,69,64,0.02)] hover:shadow-[0_20px_60px_rgba(74,69,64,0.05)] transition-all duration-700;
 }
 
-.ecosystem-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 border-t border-neutral-100;
+.mandala-bg {
+  background-image: radial-gradient(circle at 2px 2px, rgba(197, 160, 89, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.text-serene-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-stone via-gold to-stone;
+}
+
+.temple-spacing {
+  @apply py-24 lg:py-40 px-6 lg:px-24;
 }

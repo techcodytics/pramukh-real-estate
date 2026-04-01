@@ -5,12 +5,13 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navigations = [
-  { name: "Real Estate", href: "/real-estate" },
-  { name: "Ecosystem", href: "/ecosystem" },
-  { name: "Sustainability", href: "/sustainability" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
+  { name: "About Us", href: "/about" },
+  { name: "Inquiry", href: "/inquiry" },
 ];
 
 const Navbar = () => {
@@ -29,43 +30,46 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 lg:px-16 transition-all duration-500",
-        isScrolled 
-          ? "bg-white/80 backdrop-blur-2xl py-4 shadow-sm" 
-          : "bg-transparent py-8"
+        isScrolled
+          ? "bg-white/80 backdrop-blur-2xl py-4 shadow-sm"
+          : "bg-white/50 backdrop-blur-2xl py-4",
       )}
     >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-        {/* Logo - Minimal Pramukh Style */}
-        <Link href="/" className="flex flex-col group">
-          <span className={cn(
-            "font-display font-black text-2xl tracking-tighter transition-colors duration-500",
-            isScrolled ? "text-navy" : "text-navy"
-          )}>
+        {/* Logo - Serene Pramukh Style */}
+        <Link href="/" className="flex flex-col items-center group">
+          {/* <span
+            className={cn(
+              "font-serif font-semibold text-3xl tracking-tight transition-colors duration-700",
+              isScrolled ? "text-stone" : "text-stone",
+            )}
+          >
             PRAMUKH
-          </span>
-          <span className="text-[9px] uppercase tracking-[0.3em] font-medium text-gold">
-            Ecosystem of Excellence
-          </span>
+          </span> */}
+          <img src={"/images/logo.png"} alt="Logo" width={130} height={50} />
+          {/* <Image src="/images/logo.png" alt="Logo" width={100} height={62} /> */}
+          {/* <span className="text-[10px] uppercase tracking-[0.4em] font-medium text-gold/80 mt-1">
+            Architecture of Serenity
+          </span> */}
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-10">
-          <div className="flex items-center gap-8 border-r border-neutral-200 pr-10 mr-2">
-            {navigations.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="font-display font-medium text-[11px] uppercase tracking-[0.15em] text-navy/60 hover:text-gold transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          <Link 
-            href="#inquire" 
-            className="flex items-center gap-2 font-display font-bold text-[11px] uppercase tracking-widest text-navy hover:text-gold transition-colors group"
+        <div className="hidden lg:flex items-center gap-12">
+          {navigations.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="font-sans font-medium text-[12px] uppercase tracking-[0.2em] text-stone/60 hover:text-gold transition-all duration-500 relative group"
+            >
+              {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-500" />
+            </Link>
+          ))}
+          <Link
+            href="/inquiry"
+            className="serene-button !py-2.5 !px-6 text-[10px]"
           >
-            Inquire Now <ArrowUpRight size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+            Inquire
           </Link>
         </div>
 
@@ -88,7 +92,7 @@ const Navbar = () => {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 bg-white z-[60] lg:hidden p-8 flex flex-col justify-center gap-12"
           >
-            <button 
+            <button
               className="absolute top-8 right-8 text-navy p-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -106,9 +110,7 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <button className="luxury-button w-full">
-              Get an Estimate
-            </button>
+            <button className="luxury-button w-full">Get an Estimate</button>
           </motion.div>
         )}
       </AnimatePresence>
