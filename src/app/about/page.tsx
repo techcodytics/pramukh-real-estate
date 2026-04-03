@@ -33,7 +33,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-white min-h-screen mandala-bg">
+    <div className="bg-white min-h-screen geometric-bg">
       <PageHeader
         title="Our Philosophy"
         subtitle="Crafting masterworks that transcend generations. A legacy of peace, excellence, and spiritual serenity."
@@ -41,7 +41,7 @@ export default function AboutPage() {
       />
 
       {/* Legacy Section */}
-      <section className="temple-spacing px-6 lg:px-24">
+      <section className="premium-spacing px-6 lg:px-24">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -49,14 +49,14 @@ export default function AboutPage() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-8 block">
+            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-8 block">
               A Legacy of Excellence
             </span>
-            <h2 className="text-5xl md:text-7xl font-serif font-medium text-stone mb-10 leading-[1.1]">
+            <h2 className="text-5xl md:text-7xl font-serif font-medium text-black mb-10 leading-[1.1]">
               Architecture of <br />
-              <span className="italic text-stone/40">Serenity.</span>
+              <span className="italic text-black/20">Serenity.</span>
             </h2>
-            <div className="space-y-8 text-stone/70 font-sans font-light leading-relaxed text-lg max-w-xl">
+            <div className="space-y-8 text-black/60 font-sans font-light leading-relaxed text-lg max-w-xl">
               <p>
                 Pramukh Group was founded on the principle that architecture
                 should be more than just stone and mortar. It should be a
@@ -78,16 +78,16 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] bg-stone overflow-hidden">
+            <div className="aspect-[4/5] bg-black overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
                 alt="Architectural Legacy"
-                className="w-full h-full object-cover brightness-75"
+                className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000"
               />
             </div>
-            <div className="absolute -bottom-10 -left-10 bg-gold p-12 hidden md:block">
-              <div className="text-stone font-serif text-5xl mb-2">30+</div>
-              <div className="text-stone/60 text-[10px] uppercase font-bold tracking-[0.3em] font-sans">
+            <div className="absolute -bottom-10 -left-10 bg-black p-12 hidden md:block border border-white/10 shadow-2xl">
+              <div className="text-white font-serif text-5xl mb-2">30+</div>
+              <div className="text-white/40 text-[10px] uppercase font-bold tracking-[0.3em] font-sans">
                 Years of Legacy
               </div>
             </div>
@@ -96,10 +96,10 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="temple-spacing bg-stone text-beige px-6 lg:px-24">
+      <section className="premium-spacing bg-black text-white px-6 lg:px-24">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-24">
-            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-8 block">
+            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-white/40 mb-8 block">
               Our Core Pillars
             </span>
             <h2 className="text-5xl md:text-6xl font-serif font-medium text-white mb-6">
@@ -114,17 +114,17 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-10 border border-white/5 bg-white/5 hover:bg-gold transition-all duration-700 group"
+                className="p-10 border border-white/5 bg-white/5 hover:bg-white transition-all duration-700 group"
               >
                 <item.icon
-                  className="text-gold group-hover:text-stone mb-8"
+                  className="text-white/40 group-hover:text-black mb-8"
                   size={32}
                   strokeWidth={1}
                 />
-                <h3 className="text-2xl font-serif text-white group-hover:text-stone mb-4">
+                <h3 className="text-2xl font-serif text-white group-hover:text-black mb-4">
                   {item.title}
                 </h3>
-                <p className="text-white/40 group-hover:text-stone/70 font-sans font-light leading-relaxed">
+                <p className="text-white/40 group-hover:text-black/60 font-sans font-light leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

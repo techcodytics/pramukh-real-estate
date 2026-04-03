@@ -12,7 +12,7 @@ export default function InquiryPage() {
         breadcrumb="Inquire"
       />
 
-      <section className="temple-spacing px-6 lg:px-24">
+      <section className="px-6 py-20 lg:px-24">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 pb-24">
           {/* Contact Details */}
           <div>
@@ -26,7 +26,7 @@ export default function InquiryPage() {
 
             <div className="space-y-16">
               <div className="flex items-start gap-8 group">
-                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-700 border border-stone/5">
+                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black/50 transition-all duration-700 border border-stone/5">
                   <Phone size={28} strokeWidth={1} />
                 </div>
                 <div>
@@ -43,7 +43,7 @@ export default function InquiryPage() {
               </div>
 
               <div className="flex items-start gap-8 group">
-                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-700 border border-stone/5">
+                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black/50 transition-all duration-700 border border-stone/5">
                   <Mail size={28} strokeWidth={1} />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ export default function InquiryPage() {
               </div>
 
               <div className="flex items-start gap-8 group">
-                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-700 border border-stone/5">
+                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black/50 transition-all duration-700 border border-stone/5">
                   <MapPin size={28} strokeWidth={1} />
                 </div>
                 <div>

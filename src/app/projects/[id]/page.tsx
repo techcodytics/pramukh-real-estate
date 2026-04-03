@@ -80,7 +80,7 @@ export default function ProjectDetails() {
   const project = projects.find((p) => p.id === id) || projects[0];
 
   return (
-    <div className="min-h-screen bg-white mandala-bg">
+    <div className="min-h-screen bg-white geometric-bg">
       {/* Banner */}
       <section className="relative h-[75vh] w-full overflow-hidden">
         <motion.img
@@ -89,15 +89,15 @@ export default function ProjectDetails() {
           transition={{ duration: 2, ease: [0.2, 0, 0.2, 1] }}
           src={project.image}
           alt={project.name}
-          className="w-full h-full object-cover brightness-90 grayscale-[0.3]"
+          className="w-full h-full object-cover brightness-90 grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone/90 via-stone/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
         <div className="absolute bottom-24 left-0 right-0">
           <div className="max-w-7xl mx-auto px-6 lg:px-24">
             <button
               onClick={() => router.back()}
-              className="flex items-center gap-3 text-gold/80 font-sans font-bold text-[10px] uppercase tracking-[0.4em] mb-12 hover:text-white transition-all group"
+              className="flex items-center gap-3 text-white/60 font-sans font-bold text-[10px] uppercase tracking-[0.4em] mb-12 hover:text-white transition-all group"
             >
               <ChevronLeft
                 size={16}
@@ -111,24 +111,24 @@ export default function ProjectDetails() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.2, ease: [0.2, 0, 0.2, 1] }}
             >
-              <span className="text-gold font-sans font-bold text-[10px] uppercase tracking-[0.5em] mb-6 block">
+              <span className="text-white/40 font-sans font-bold text-[10px] uppercase tracking-[0.5em] mb-6 block">
                 Refined Living
               </span>
               <h1 className="text-6xl md:text-9xl font-serif text-white mb-8 tracking-tight leading-[0.85]">
                 {project.name}
-                <span className="text-gold">.</span>
+                <span className="text-white/20">.</span>
               </h1>
-              <div className="flex flex-wrap items-center gap-8 text-beige/80">
+              <div className="flex flex-wrap items-center gap-8 text-white/80">
                 <span className="flex items-center gap-3 font-sans text-[11px] font-bold uppercase tracking-[0.2em] bg-white/5 backdrop-blur-xl px-6 py-3 border border-white/10">
-                  <MapPin size={14} className="text-gold" /> {project.location},{" "}
+                  <MapPin size={14} className="text-white/40" /> {project.location},{" "}
                   {project.city}
                 </span>
                 <span className="flex items-center gap-3 font-sans text-[11px] font-bold uppercase tracking-[0.2em] bg-white/5 backdrop-blur-xl px-6 py-3 border border-white/10">
-                  <Building2 size={14} className="text-gold" /> {project.type}
+                  <Building2 size={14} className="text-white/40" /> {project.type}
                 </span>
                 <div className="h-10 w-px bg-white/20 mx-2 hidden md:block" />
                 <span className="flex items-center gap-3 text-white font-sans font-bold text-[10px] uppercase tracking-[0.3em]">
-                  <Sparkles size={14} className="text-gold animate-pulse" />{" "}
+                  <Sparkles size={14} className="text-white/40 animate-pulse" />{" "}
                   {project.status}
                 </span>
               </div>
@@ -138,26 +138,26 @@ export default function ProjectDetails() {
       </section>
 
       {/* Details Section */}
-      <section className="temple-spacing">
+      <section className="premium-spacing">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-24 grid grid-cols-1 lg:grid-cols-12 gap-24">
           {/* Main Info */}
           <div className="lg:col-span-7">
             <div className="mb-16">
-              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-8 block">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-8 block">
                 The Narrative
               </span>
-              <h2 className="text-5xl font-serif text-stone mb-8 leading-tight">
+              <h2 className="text-5xl font-serif text-black mb-8 leading-tight">
                 Architecture of <br />
-                <span className="italic text-stone/40">Pure Grace.</span>
+                <span className="italic text-black/20">Pure Grace.</span>
               </h2>
-              <p className="text-stone/60 font-sans font-light text-xl leading-relaxed italic border-l-2 border-gold/30 pl-8 mb-16">
+              <p className="text-black/60 font-sans font-light text-xl leading-relaxed italic border-l-2 border-black/10 pl-8 mb-16">
                 {project.desc} At Pramukh Group, we believe that {project.name}{" "}
                 is not just a structure, but a sanctuary of values. Every line
                 and curve is a testament to our discipline and commitment to
                 peace.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-2 gap-6 py-12 border-y border-stone/10">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-6 py-12 border-y border-black/5">
                 {[
                   {
                     icon: <Calendar size={20} strokeWidth={1.5} />,
@@ -181,12 +181,12 @@ export default function ProjectDetails() {
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col gap-6">
-                    <div className="text-gold">{item.icon}</div>
+                    <div className="text-black/40">{item.icon}</div>
                     <div>
-                      <div className="text-[9px] uppercase tracking-[0.4em] font-bold text-stone/30 mb-2">
+                      <div className="text-[9px] uppercase tracking-[0.4em] font-bold text-black/20 mb-2">
                         {item.label}
                       </div>
-                      <div className="text-stone font-serif text-lg italic leading-tight">
+                      <div className="text-black font-serif text-lg italic leading-tight">
                         {item.value}
                       </div>
                     </div>
@@ -196,10 +196,10 @@ export default function ProjectDetails() {
             </div>
 
             <div className="mb-14">
-              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-10 block">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-10 block">
                 Amenities
               </span>
-              <h2 className="text-4xl font-serif text-stone mb-14 underline-offset-8 decoration-gold/20 decoration-1 underline">
+              <h2 className="text-4xl font-serif text-black mb-14 underline-offset-8 decoration-black/10 decoration-1 underline">
                 Curated Well-being
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -217,12 +217,12 @@ export default function ProjectDetails() {
                     key={i}
                     whileHover={{ x: 10 }}
                     transition={{ duration: 0.5 }}
-                    className="flex items-center gap-8 p-8 border border-stone/5 hover:border-gold/30 transition-all duration-700 bg-linear-to-br from-white to-stone/[0.02] group shadow-xs hover:shadow-xl"
+                    className="flex items-center gap-8 p-8 border border-black/5 hover:border-black/20 transition-all duration-700 bg-linear-to-br from-white to-black/1 group shadow-xs hover:shadow-xl"
                   >
-                    <div className="w-12 h-12 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-stone transition-all duration-700">
+                    <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center text-black/40 group-hover:bg-black group-hover:text-white transition-all duration-700">
                       <CheckCircle2 size={20} strokeWidth={1} />
                     </div>
-                    <span className="text-xl font-serif text-stone italic">
+                    <span className="text-xl font-serif text-black italic">
                       {a}
                     </span>
                   </motion.div>
@@ -231,13 +231,13 @@ export default function ProjectDetails() {
             </div>
           </div>
 
-          {/* Sidebar / Inquiry Form - PROPER DESIGN */}
+          {/* Sidebar / Inquiry Form */}
           <div className="lg:col-span-5 relative">
-            <div className="sticky top-26 bg-stone p-8 lg:p-8 border-t-4 border-gold shadow-[0_40px_100px_-20px_rgba(45,42,38,0.3)] text-beige overflow-hidden mandala-bg-dark">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="sticky top-26 bg-black p-8 lg:p-10 border-t-4 border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] text-white overflow-hidden geometric-bg">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
               <div className="relative z-10">
-                <span className="text-[9px] font-sans font-bold uppercase tracking-[0.5em] text-gold mb-6 block">
+                <span className="text-[9px] font-sans font-bold uppercase tracking-[0.5em] text-white/40 mb-6 block">
                   Personal Sanctuary
                 </span>
                 <h3 className="text-4xl font-serif mb-6 leading-tight">
@@ -253,29 +253,29 @@ export default function ProjectDetails() {
 
                 <form className="space-y-10">
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-beige/20 px-2 font-sans group-focus-within:text-gold transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
                       Full Name
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-beige placeholder:text-beige/10 outline-none focus:border-gold focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
                       placeholder="e.g. Johnathan Doe"
                     />
                   </div>
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-beige/20 px-2 font-sans group-focus-within:text-gold transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
                       Mobile Number
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-beige placeholder:text-beige/10 outline-none focus:border-gold focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
                       placeholder="+91 00000 00000"
                     />
                   </div>
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-beige/20 px-2 font-sans group-focus-within:text-gold transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
                       Email Address
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-beige placeholder:text-beige/10 outline-none focus:border-gold focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
                       placeholder="johndoe@sanctuary.com"
                     />
                   </div>
@@ -284,22 +284,22 @@ export default function ProjectDetails() {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full py-6 bg-gold text-stone font-sans font-bold uppercase tracking-[0.4em] text-[11px] flex items-center justify-center gap-4 transition-all duration-700 shadow-[0_15px_30px_-5px_rgba(197,165,114,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(197,165,114,0.5)] hover:bg-white"
+                      className="w-full py-6 bg-white text-black font-sans font-bold uppercase tracking-[0.4em] text-[11px] flex items-center justify-center gap-4 transition-all duration-700 shadow-2xl hover:bg-black hover:text-white hover:border hover:border-white/20"
                     >
                       Enquire Now <Sparkles size={16} />
                     </motion.button>
-                    <p className="text-[9px] text-center text-beige/20 mt-8 font-sans font-medium uppercase tracking-[0.2em] leading-relaxed">
+                    <p className="text-[9px] text-center text-white/20 mt-8 font-sans font-medium uppercase tracking-[0.2em] leading-relaxed">
                       By inquiring, you agree to our <br />
                       <a
                         href="/privacy-policy"
-                        className="text-gold/60 underline underline-offset-4"
+                        className="text-white/60 underline underline-offset-4"
                       >
                         Privacy Policy
                       </a>{" "}
                       and{" "}
                       <a
                         href="/terms-and-conditions"
-                        className="text-gold/60 underline underline-offset-4"
+                        className="text-white/60 underline underline-offset-4"
                       >
                         Terms
                       </a>
@@ -310,14 +310,14 @@ export default function ProjectDetails() {
 
                 <div className="mt-16 pt-12 border-t border-white/5 flex flex-col gap-8">
                   <div className="flex items-center gap-8 group cursor-pointer">
-                    <div className="w-16 h-16 bg-white/[0.03] rounded-full flex items-center justify-center text-gold border border-white/5 group-hover:bg-gold group-hover:text-stone transition-all duration-1000 shadow-inner">
+                    <div className="w-16 h-16 bg-white/[0.03] rounded-full flex items-center justify-center text-white/40 border border-white/5 group-hover:bg-white group-hover:text-black transition-all duration-1000 shadow-inner">
                       <Phone size={24} strokeWidth={1} />
                     </div>
                     <div>
-                      <div className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-beige/20 mb-1">
+                      <div className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-white/20 mb-1">
                         Direct Advisor
                       </div>
-                      <div className="font-serif italic text-3xl text-white tracking-tight group-hover:text-gold transition-colors">
+                      <div className="font-serif italic text-3xl text-white tracking-tight group-hover:text-white/60 transition-colors">
                         +91 97261 11333
                       </div>
                     </div>

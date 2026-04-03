@@ -72,26 +72,26 @@ export default function Home() {
       : projects.filter((p) => p.city === activeCity);
 
   return (
-    <div className="bg-beige min-h-screen mandala-bg">
+    <div className="bg-white min-h-screen geometric-bg">
       <Hero />
 
       {/* Philosophy Section */}
-      <section className="temple-spacing bg-white/50 relative overflow-hidden">
+      <section className="premium-spacing bg-neutral-50/50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-6 block"
+            className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-6 block"
           >
             The Soul of Pramukh
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-serif text-stone mb-12"
+            className="text-4xl md:text-6xl font-serif text-black mb-12"
           >
             Built on Values, <br />
-            <span className="italic text-stone/60">Defined by Serenity.</span>
+            <span className="italic text-black/40">Defined by Serenity.</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-20">
@@ -124,13 +124,13 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-16 h-16 rounded-full bg-stone/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-700 mb-6">
+                <div className="w-16 h-16 rounded-full bg-black/5 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-all duration-700 mb-6">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-xl text-stone mb-3">
+                <h3 className="font-serif text-xl text-black mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-stone/40 font-sans leading-relaxed px-4">
+                <p className="text-sm text-black/40 font-sans leading-relaxed px-4">
                   {item.desc}
                 </p>
               </motion.div>
@@ -142,16 +142,16 @@ export default function Home() {
       <Ecosystem />
 
       {/* Real Estate Section */}
-      <section id="projects" className="temple-spacing bg-white">
+      <section id="projects" className="premium-spacing bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-20">
             <div className="max-w-2xl">
-              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-6 block">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-6 block">
                 Sanctuaries of Grace
               </span>
-              <h2 className="text-5xl md:text-7xl font-serif text-stone mb-8">
+              <h2 className="text-5xl md:text-7xl font-serif text-black mb-8">
                 Featured <br />
-                <span className="italic text-stone/40">Masterpieces.</span>
+                <span className="italic text-black/20">Masterpieces.</span>
               </h2>
             </div>
 
@@ -164,15 +164,15 @@ export default function Home() {
                   className={cn(
                     "px-4 py-2 text-[11px] uppercase font-sans font-bold tracking-[0.2em] transition-all duration-500 relative",
                     activeCity === city
-                      ? "text-gold"
-                      : "text-stone/30 hover:text-stone",
+                      ? "text-black"
+                      : "text-black/20 hover:text-black",
                   )}
                 >
                   {city}
                   {activeCity === city && (
                     <motion.span
                       layoutId="activeTab"
-                      className="absolute -bottom-px left-0 right-0 h-[2px] bg-gold"
+                      className="absolute -bottom-px left-0 right-0 h-[2px] bg-black"
                     />
                   )}
                 </button>
@@ -190,9 +190,9 @@ export default function Home() {
 
           <div className="mt-24 flex justify-center">
             <Link href="/projects">
-              <button className="flex items-center gap-6 group font-serif italic text-xl text-stone hover:text-gold transition-colors">
+              <button className="flex items-center gap-6 group font-serif italic text-xl text-black hover:opacity-60 transition-all">
                 Explore Our Full Collection{" "}
-                <span className="w-16 h-px bg-stone/20 group-hover:w-24 group-hover:bg-gold transition-all duration-700" />
+                <span className="w-16 h-px bg-black/10 group-hover:w-24 group-hover:bg-black transition-all duration-700" />
               </button>
             </Link>
           </div>
@@ -200,18 +200,18 @@ export default function Home() {
       </section>
 
       {/* Amenities Section */}
-      <section className="bg-beige relative overflow-hidden">
+      <section className="bg-neutral-50 relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-[600px] lg:h-auto overflow-hidden">
             <img
               src="/images/amenities_serene.png"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale"
               alt="Serene Amenities"
             />
-            <div className="absolute inset-0 bg-stone/20" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
-          <div className="temple-spacing flex flex-col justify-center bg-stone text-beige">
-            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-6 block">
+          <div className="premium-spacing flex flex-col justify-center bg-black text-white">
+            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-white/40 mb-6 block">
               Life in Harmony
             </span>
             <h2 className="text-5xl md:text-7xl font-serif mb-12">
@@ -244,8 +244,8 @@ export default function Home() {
                 },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col gap-3">
-                  <div className="flex items-center gap-4 text-gold/80">
-                    <div className="w-8 h-px bg-gold/50" />
+                  <div className="flex items-center gap-4 text-white/60">
+                    <div className="w-8 h-px bg-white/20" />
                     <span className="font-serif italic text-lg">{item.t}</span>
                   </div>
                   <p className="text-sm opacity-40 pl-12 leading-relaxed font-sans">
@@ -261,15 +261,15 @@ export default function Home() {
       <StatsCounter />
 
       {/* Contact CTA */}
-      <section className="temple-spacing bg-white text-center">
+      <section className="premium-spacing bg-white text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-serif text-stone mb-10">
+          <h2 className="text-4xl md:text-6xl font-serif text-black mb-10">
             Begin Your Journey <br />
-            <span className="italic text-stone/40 text-3xl md:text-5xl">
+            <span className="italic text-black/20 text-3xl md:text-5xl">
               Towards a Serene Lifestyle.
             </span>
           </h2>
-          <p className="text-stone/60 font-sans font-light text-lg mb-12">
+          <p className="text-black/40 font-sans font-light text-lg mb-12">
             Connect with our sanctuary advisors to discover a home that reflects
             your values.
           </p>

@@ -13,7 +13,7 @@ const slides = [
     title: (
       <>
         Architecture <br />
-        <span className="italic text-gold">of Serenity.</span>
+        <span className="italic text-white">of Serenity.</span>
       </>
     ),
     description:
@@ -26,7 +26,7 @@ const slides = [
     title: (
       <>
         Purity <br />
-        <span className="italic text-gold">in Every Line.</span>
+        <span className="italic text-white">in Every Line.</span>
       </>
     ),
     description:
@@ -39,7 +39,7 @@ const slides = [
     title: (
       <>
         Sanctuaries <br />
-        <span className="italic text-gold">of the Soul.</span>
+        <span className="italic text-white">of the Soul.</span>
       </>
     ),
     description:
@@ -124,8 +124,8 @@ const Hero = () => {
               />
             </motion.div>
             {/* Stronger overlay for font visibility */}
-            <div className="absolute inset-0 bg-stone/40 backdrop-blur-[2px]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-stone/60 via-transparent to-stone/80" />
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -144,9 +144,9 @@ const Hero = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <div className="mb-8 inline-flex items-center gap-4 bg-white/20 backdrop-blur-2xl px-6 py-2 rounded-none border border-white/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] text-white font-sans font-semibold uppercase tracking-[0.3em]">
+            <div className="mb-8 inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl px-6 py-2 rounded-none border border-white/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+              <span className="text-[11px] text-white font-sans font-bold uppercase tracking-[0.4em]">
                 {slides[currentSlide].tagline}
               </span>
             </div>
@@ -160,10 +160,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="bg-gold text-stone px-12 py-4 rounded-none font-serif font-medium text-sm tracking-[0.2em] transition-all duration-700 hover:bg-white hover:text-stone min-w-[240px] shadow-xl">
+              <button className="bg-white text-black px-12 py-4 rounded-none font-sans font-bold text-[11px] tracking-[0.3em] uppercase transition-all duration-500 hover:bg-black hover:text-white border border-white min-w-[240px] shadow-2xl">
                 Explore Sanctuaries
               </button>
-              <button className="px-12 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-serif font-medium text-sm tracking-[0.2em] hover:bg-white hover:text-stone transition-all duration-700 min-w-[240px]">
+              <button className="px-12 py-4 bg-transparent border border-white text-white font-sans font-bold text-[11px] tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all duration-500 min-w-[240px]">
                 Our Philosophy
               </button>
             </div>
@@ -185,7 +185,7 @@ const Hero = () => {
             <span
               className={cn(
                 "absolute right-10 text-[11px] font-sans font-bold uppercase tracking-widest text-white transition-all duration-500 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0",
-                currentSlide === index && "opacity-100 translate-x-0 text-gold",
+                currentSlide === index && "opacity-100 translate-x-0",
               )}
             >
               0{index + 1}
@@ -224,7 +224,7 @@ const Hero = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-          className="text-gold"
+          className="text-white"
         >
           <ArrowDown size={18} strokeWidth={1.5} />
         </motion.div>

@@ -58,7 +58,7 @@ const ecosystems: EcosystemItem[] = [
 
 const Ecosystem = () => {
   return (
-    <section id="ecosystem" className="bg-white border-y border-stone/5">
+    <section id="ecosystem" className="bg-white border-y border-black/5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 group">
         {ecosystems.map((item, index) => (
           <motion.div
@@ -68,25 +68,25 @@ const Ecosystem = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 1 }}
             className={cn(
-              "relative p-14 lg:p-20 h-[450px] flex flex-col justify-between border-r border-stone/5 last:border-r-0 transition-all duration-1000 hover:bg-stone group/item hover:z-10",
+              "relative p-14 lg:p-20 h-[450px] flex flex-col justify-between border-r border-black/5 last:border-r-0 transition-all duration-1000 hover:bg-black group/item hover:z-10",
               item.bg,
             )}
           >
             <div>
-              <div className="w-16 h-16 mb-10 text-gold flex items-center justify-center group-hover/item:text-gold/60 transition-colors duration-700">
+              <div className="w-16 h-16 mb-10 text-black flex items-center justify-center group-hover/item:text-white transition-colors duration-700">
                 <item.Icon size={40} strokeWidth={1} />
               </div>
-              <h3 className="text-3xl font-serif font-medium text-stone mb-6 transition-colors duration-700 group-hover/item:text-beige">
+              <h3 className="text-3xl font-serif font-medium text-black mb-6 transition-colors duration-700 group-hover/item:text-white">
                 {item.title}
               </h3>
-              <p className="text-sm font-sans font-light text-stone/40 leading-relaxed border-l border-gold/30 pl-6 transition-colors duration-700 group-hover/item:text-beige/60">
+              <p className="text-sm font-sans font-light text-black/40 leading-relaxed border-l border-black/10 pl-6 transition-colors duration-700 group-hover/item:text-white/60">
                 {item.description}
               </p>
             </div>
 
             <a
               href={item.link}
-              className="inline-flex items-center gap-4 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-stone group-hover/item:text-gold transition-colors duration-700 mt-10"
+              className="inline-flex items-center gap-4 text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-black group-hover/item:text-white transition-colors duration-700 mt-10"
             >
               Learn More{" "}
               <ArrowRight
@@ -98,21 +98,21 @@ const Ecosystem = () => {
         ))}
       </div>
 
-      <div className="bg-stone p-10 flex flex-col md:flex-row items-center justify-between gap-8 px-14 lg:px-24">
+      <div className="bg-black p-10 flex flex-col md:flex-row items-center justify-between gap-8 px-14 lg:px-24">
         <div className="flex items-center gap-6">
-          <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/40">
             <Cpu size={24} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col">
-            <span className="text-[10px] text-white/30 uppercase tracking-[0.4em] font-bold mb-1">
+            <span className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-bold mb-1">
               PropTech Ecosystem
             </span>
-            <span className="text-lg text-beige/80 font-serif italic">
+            <span className="text-lg text-white/80 font-serif italic">
               Simplifying Real Estate through Intelligence.
             </span>
           </div>
         </div>
-        <button className="flex items-center gap-3 text-[11px] text-gold uppercase tracking-[0.2em] font-bold group bg-white/5 py-3 px-8 hover:bg-white/10 transition-colors">
+        <button className="flex items-center gap-3 text-[11px] text-white/60 uppercase tracking-[0.2em] font-bold group bg-white/5 py-3 px-8 hover:bg-white hover:text-black transition-colors">
           Explore RealEstateOS{" "}
           <Globe
             size={16}

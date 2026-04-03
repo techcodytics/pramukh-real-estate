@@ -17,7 +17,7 @@ const StatsCounter = () => {
   return (
     <section
       ref={ref}
-      className="py-24 lg:py-40 bg-white border-b border-stone/5 flex items-center justify-center"
+      className="py-24 lg:py-40 bg-white border-b border-black/5 flex items-center justify-center"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-16 md:gap-24 text-center">
@@ -33,13 +33,13 @@ const StatsCounter = () => {
               }}
               className="flex flex-col items-center group"
             >
-              <div className="text-6xl md:text-8xl font-serif text-stone tracking-tight mb-4 group-hover:text-gold transition-colors duration-700">
+              <div className="text-6xl md:text-8xl font-serif text-black tracking-tight mb-4 group-hover:text-neutral-500 transition-colors duration-700">
                 {stat.value}
               </div>
-              <div className="text-[10px] uppercase tracking-[0.4em] font-sans font-bold text-stone/30 group-hover:text-gold/60 transition-colors duration-700">
+              <div className="text-[10px] uppercase tracking-[0.4em] font-sans font-bold text-black/20 group-hover:text-black/40 transition-colors duration-700">
                 {stat.label}
               </div>
-              <div className="w-12 h-px bg-stone/10 mt-8 group-hover:w-20 group-hover:bg-gold/30 transition-all duration-700" />
+              <div className="w-12 h-px bg-black/5 mt-8 group-hover:w-20 group-hover:bg-black/20 transition-all duration-700" />
             </motion.div>
           ))}
         </div>

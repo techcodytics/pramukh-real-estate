@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navigations = [
@@ -16,6 +17,10 @@ const navigations = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
+  const shouldBeBlack = isScrolled || !isHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +34,9 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 lg:px-16 transition-all duration-500",
-        isScrolled
-          ? "bg-white/80 backdrop-blur-2xl py-4 shadow-sm"
-          : "bg-white/50 backdrop-blur-2xl py-4",
+        shouldBeBlack
+          ? "bg-black/95 backdrop-blur-xl py-4 text-white! shadow-2xl"
+          : "bg-transparent py-6 text-white!",
       )}
     >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
@@ -45,7 +50,12 @@ const Navbar = () => {
           >
             PRAMUKH
           </span> */}
-          <img src={"/images/logo.png"} alt="Logo" width={130} height={50} />
+          <img
+            src={"/images/logo_white.png"}
+            alt="Logo"
+            width={130}
+            height={50}
+          />
           {/* <Image src="/images/logo.png" alt="Logo" width={100} height={62} /> */}
           {/* <span className="text-[10px] uppercase tracking-[0.4em] font-medium text-gold/80 mt-1">
             Architecture of Serenity
@@ -58,15 +68,15 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="font-sans font-medium text-[12px] uppercase tracking-[0.2em] text-stone/60 hover:text-gold transition-all duration-500 relative group"
+              className="font-sans font-bold text-[11px] uppercase tracking-[0.3em] text-white/80 hover:text-white transition-all duration-500 relative group"
             >
               {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-500" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-500" />
             </Link>
           ))}
           <Link
             href="/inquiry"
-            className="serene-button !py-2.5 !px-6 text-[10px]"
+            className="serene-button py-2.5! px-8! text-[10px] border border-white! bg-transparent! hover:bg-white! hover:text-black! transition-all duration-500"
           >
             Inquire
           </Link>
@@ -89,10 +99,10 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-white z-[60] lg:hidden p-8 flex flex-col justify-center gap-12"
+            className="fixed inset-0 bg-black z-[60] lg:hidden p-8 flex flex-col justify-center gap-12"
           >
             <button
-              className="absolute top-8 right-8 text-navy p-2"
+              className="absolute top-8 right-8 text-white p-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               <X size={32} />
@@ -102,14 +112,16 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="font-display font-extrabold text-4xl text-navy uppercase tracking-tighter"
+                  className="font-serif font-medium text-5xl text-white uppercase tracking-tight"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-            <button className="luxury-button w-full">Get an Estimate</button>
+            <Link href="/inquiry" onClick={() => setMobileMenuOpen(false)}>
+              <button className="serene-button w-full">Get in Touch</button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

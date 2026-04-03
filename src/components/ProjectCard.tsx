@@ -46,15 +46,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Serene Status Badge */}
         <div className="absolute top-6 left-6">
-          <span className="bg-white/90 backdrop-blur-md px-4 py-1.5 text-stone font-sans font-semibold text-[10px] uppercase tracking-[0.2em] shadow-sm border border-stone/5">
+          <span className="bg-black text-white px-4 py-1.5 font-sans font-bold text-[10px] uppercase tracking-[0.2em] shadow-lg">
             {status}
           </span>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-stone/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
           <Link
             href={`/projects/${id}`}
-            className="inline-flex items-center gap-3 font-serif italic text-white text-lg tracking-wide hover:text-gold transition-colors"
+            className="inline-flex items-center gap-3 font-serif italic text-white text-lg tracking-wide hover:underline decoration-white/30 transition-all"
           >
             Discover More <ArrowUpRight size={18} strokeWidth={1} />
           </Link>
@@ -64,26 +64,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-10 flex flex-col justify-between flex-grow">
         <div>
           <div className="mb-6">
-            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-gold/80 mb-2 block">
+            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-black/40 mb-2 block">
               {type}
             </span>
-            <h3 className="text-3xl font-serif font-medium text-stone group-hover:text-gold transition-colors duration-500">
+            <h3 className="text-3xl font-serif font-medium text-black group-hover:text-neutral-600 transition-colors duration-500">
               {name}
             </h3>
           </div>
 
-          <div className="space-y-6 pt-4 border-t border-stone/5">
+          <div className="space-y-6 pt-4 border-t border-black/5">
             <div className="flex items-start gap-4">
               <MapPin
                 size={16}
                 strokeWidth={1.5}
-                className="text-gold shrink-0 mt-1"
+                className="text-black/20 shrink-0 mt-1"
               />
               <div className="flex flex-col">
-                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-stone/40 mb-1">
+                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/20 mb-1">
                   Sanctuary Location
                 </span>
-                <span className="text-sm font-sans font-medium text-stone/70">
+                <span className="text-sm font-sans font-medium text-black/60">
                   {location}, {city}
                 </span>
               </div>
@@ -93,13 +93,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Building2
                 size={16}
                 strokeWidth={1.5}
-                className="text-gold shrink-0 mt-1"
+                className="text-black/20 shrink-0 mt-1"
               />
               <div className="flex flex-col">
-                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-stone/40 mb-1">
+                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/20 mb-1">
                   Configuration
                 </span>
-                <span className="text-sm font-sans font-medium text-stone/70">
+                <span className="text-sm font-sans font-medium text-black/60">
                   {config}
                 </span>
               </div>

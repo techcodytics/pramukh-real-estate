@@ -59,7 +59,7 @@ export default function RootLayout({
         "h-full antialiased font-sans",
       )}
     >
-      <body className="flex min-h-full flex-col bg-stone-50 text-stone-900 selection:bg-orange-100">
+      <body className="flex min-h-full flex-col bg-white text-black selection:bg-black selection:text-white">
         <Navbar />
         <main className="grow">{children}</main>
         <Footer />

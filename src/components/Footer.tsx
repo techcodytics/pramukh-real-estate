@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-stone text-beige pt-24 pb-12 px-6 lg:px-24 overflow-hidden border-t border-gold/10">
+    <footer className="bg-black text-white pt-24 pb-12 px-6 lg:px-24 overflow-hidden border-t border-white/5">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-24 mb-24">
           {/* Brand & Philosophy */}
@@ -25,7 +25,7 @@ const Footer = () => {
                 height={50}
               />
             </Link>
-            <p className="max-w-md text-white/40 font-sans font-light text-base leading-relaxed mb-12 italic border-l border-gold/20 pl-6">
+            <p className="max-w-md text-white/40 font-sans font-light text-base leading-relaxed mb-12 italic border-l border-white/20 pl-6">
               &quot;Crafting masterworks that transcend generations. Our
               philosophy integrates spaces, services, and values designed for a
               lifetime of peace.&quot;
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link
                   key={i}
                   href="#"
-                  className="hover:text-gold transition-all duration-500 hover:-translate-y-1"
+                  className="hover:text-white transition-all duration-500 hover:-translate-y-1"
                 >
                   <Icon size={20} strokeWidth={1} />
                 </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Navigation links */}
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-10">
+            <h4 className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-white/40 mb-10">
               Sanctuaries
             </h4>
             <ul className="space-y-6">
@@ -74,12 +74,12 @@ const Footer = () => {
 
           {/* Contact Details */}
           <div className="lg:col-span-4">
-            <h4 className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-gold mb-12">
+            <h4 className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-white/40 mb-12">
               Connect with us
             </h4>
             <div className="space-y-12">
               <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-stone transition-all duration-700 border border-white/5">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/60 group-hover:bg-white group-hover:text-black transition-all duration-700 border border-white/5">
                   <Phone size={20} strokeWidth={1} />
                 </div>
                 <div>
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-stone transition-all duration-700 border border-white/5">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/60 group-hover:bg-white group-hover:text-black transition-all duration-700 border border-white/5">
                   <Mail size={20} strokeWidth={1} />
                 </div>
                 <div>
