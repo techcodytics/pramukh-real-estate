@@ -233,49 +233,49 @@ export default function ProjectDetails() {
 
           {/* Sidebar / Inquiry Form */}
           <div className="lg:col-span-5 relative">
-            <div className="sticky top-26 bg-black p-8 lg:p-10 border-t-4 border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] text-white overflow-hidden geometric-bg">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="sticky top-26 bg-white p-8 lg:p-10 border border-neutral-200 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] text-black overflow-hidden geometric-bg">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-black/5 blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
               <div className="relative z-10">
-                <span className="text-[9px] font-sans font-bold uppercase tracking-[0.5em] text-white/40 mb-6 block">
+                <span className="text-[9px] font-sans font-bold uppercase tracking-[0.5em] text-black/40 mb-6 block">
                   Personal Sanctuary
                 </span>
                 <h3 className="text-4xl font-serif mb-6 leading-tight">
                   Request <br />
-                  <span className="italic text-white opacity-40">
+                  <span className="italic text-black opacity-30">
                     Portfolio.
                   </span>
                 </h3>
-                <p className="text-sm font-sans font-light text-beige/40 mb-12 leading-relaxed">
+                <p className="text-sm font-sans font-light text-black/60 mb-12 leading-relaxed">
                   Allow our advisors to guide you through the masterwork of{" "}
                   {project.name}.
                 </p>
 
                 <form className="space-y-10">
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-black/20 px-2 font-sans group-focus-within:text-black transition-colors">
                       Full Name
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-neutral-50 border-b border-black/5 p-5 text-base font-sans font-light text-black placeholder:text-black/20 outline-none focus:border-black focus:bg-white transition-all duration-700"
                       placeholder="e.g. Johnathan Doe"
                     />
                   </div>
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-black/20 px-2 font-sans group-focus-within:text-black transition-colors">
                       Mobile Number
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-neutral-50 border-b border-black/5 p-5 text-base font-sans font-light text-black placeholder:text-black/20 outline-none focus:border-black focus:bg-white transition-all duration-700"
                       placeholder="+91 00000 00000"
                     />
                   </div>
                   <div className="space-y-4 group">
-                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20 px-2 font-sans group-focus-within:text-white transition-colors">
+                    <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-black/20 px-2 font-sans group-focus-within:text-black transition-colors">
                       Email Address
                     </label>
                     <input
-                      className="w-full bg-white/[0.03] border-b border-white/10 p-5 text-base font-sans font-light text-white placeholder:text-white/10 outline-none focus:border-white focus:bg-white/[0.06] transition-all duration-700"
+                      className="w-full bg-neutral-50 border-b border-black/5 p-5 text-base font-sans font-light text-black placeholder:text-black/20 outline-none focus:border-black focus:bg-white transition-all duration-700"
                       placeholder="johndoe@sanctuary.com"
                     />
                   </div>
@@ -284,22 +284,22 @@ export default function ProjectDetails() {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full py-6 bg-white text-black font-sans font-bold uppercase tracking-[0.4em] text-[11px] flex items-center justify-center gap-4 transition-all duration-700 shadow-2xl hover:bg-black hover:text-white hover:border hover:border-white/20"
+                      className="w-full py-6 bg-black text-white font-sans font-bold uppercase tracking-[0.4em] text-[11px] flex items-center justify-center gap-4 transition-all duration-700 shadow-2xl hover:bg-neutral-800"
                     >
                       Enquire Now <Sparkles size={16} />
                     </motion.button>
-                    <p className="text-[9px] text-center text-white/20 mt-8 font-sans font-medium uppercase tracking-[0.2em] leading-relaxed">
+                    <p className="text-[9px] text-center text-black/20 mt-8 font-sans font-medium uppercase tracking-[0.2em] leading-relaxed">
                       By inquiring, you agree to our <br />
                       <a
                         href="/privacy-policy"
-                        className="text-white/60 underline underline-offset-4"
+                        className="text-black/60 underline underline-offset-4"
                       >
                         Privacy Policy
                       </a>{" "}
                       and{" "}
                       <a
                         href="/terms-and-conditions"
-                        className="text-white/60 underline underline-offset-4"
+                        className="text-black/60 underline underline-offset-4"
                       >
                         Terms
                       </a>
@@ -308,16 +308,16 @@ export default function ProjectDetails() {
                   </div>
                 </form>
 
-                <div className="mt-16 pt-12 border-t border-white/5 flex flex-col gap-8">
+                <div className="mt-16 pt-12 border-t border-black/5 flex flex-col gap-8">
                   <div className="flex items-center gap-8 group cursor-pointer">
-                    <div className="w-16 h-16 bg-white/[0.03] rounded-full flex items-center justify-center text-white/40 border border-white/5 group-hover:bg-white group-hover:text-black transition-all duration-1000 shadow-inner">
+                    <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center text-black border border-black/5 group-hover:bg-black group-hover:text-white transition-all duration-1000 shadow-inner">
                       <Phone size={24} strokeWidth={1} />
                     </div>
                     <div>
-                      <div className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-white/20 mb-1">
+                      <div className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/20 mb-1">
                         Direct Advisor
                       </div>
-                      <div className="font-serif italic text-3xl text-white tracking-tight group-hover:text-white/60 transition-colors">
+                      <div className="font-serif italic text-3xl text-black tracking-tight group-hover:text-black/60 transition-colors">
                         +91 97261 11333
                       </div>
                     </div>

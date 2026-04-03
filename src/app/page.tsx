@@ -273,7 +273,9 @@ export default function Home() {
             Connect with our sanctuary advisors to discover a home that reflects
             your values.
           </p>
-          <button className="serene-button">Arrange a Consultation</button>
+          <Link href="/inquiry">
+            <button className="serene-button">Arrange a Consultation</button>
+          </Link>
         </div>
       </section>
     </div>
