@@ -9,6 +9,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Heart, Leaf, Shield, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const projects = [
   {
@@ -156,7 +161,7 @@ export default function Home() {
             </div>
 
             {/* Serene Filter */}
-            <div className="flex flex-wrap items-center gap-6 border-b border-stone/10 pb-4">
+            <div className="flex flex-wrap items-center gap-6 pb-4">
               {cities.map((city) => (
                 <button
                   key={city}
@@ -180,12 +185,31 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project) => (
-                <ProjectCard key={project.id} {...project} />
-              ))}
-            </AnimatePresence>
+          <div className="py-4">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={24}
+              slidesPerView={1}
+              breakpoints={{
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3.2 },
+              }}
+              pagination={{
+                clickable: true,
+                bulletActiveClass: "swiper-pagination-bullet-active bg-black!",
+                bulletClass: "swiper-pagination-bullet bg-black/20! transition-all! duration-300!",
+              }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className="w-full pb-12!"
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredProjects.map((project) => (
+                  <SwiperSlide key={project.id}>
+                    <ProjectCard {...project} />
+                  </SwiperSlide>
+                ))}
+              </AnimatePresence>
+            </Swiper>
           </div>
 
           <div className="mt-24 flex justify-center">

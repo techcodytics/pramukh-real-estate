@@ -132,6 +132,71 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* Team Section */}
+      <section className="premium-spacing px-6 lg:px-24 bg-neutral-50/50">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-24">
+            <span className="text-[11px] font-sans font-bold uppercase tracking-[0.4em] text-black/40 mb-8 block">
+              The Visionaries
+            </span>
+            <h2 className="text-5xl md:text-6xl font-serif font-medium text-black mb-6">
+              Our <span className="italic text-black/40">Leadership.</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {[
+              {
+                name: "Aarav Patel",
+                role: "Founder & Chairman",
+                image:
+                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
+              },
+              {
+                name: "Priya Sharma",
+                role: "Chief Architect",
+                image:
+                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+              },
+              {
+                name: "Rohan Desai",
+                role: "Head of Operations",
+                image:
+                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
+              },
+              {
+                name: "Meera Reddy",
+                role: "Lead Designer",
+                image:
+                  "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="aspect-[3/4] overflow-hidden bg-black/5 mb-6 relative">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-700" />
+                </div>
+                <h3 className="text-2xl font-serif text-black mb-2 transition-colors duration-500">
+                  {member.name}
+                </h3>
+                <p className="text-black/40 group-hover:text-black/60 transition-colors duration-500 font-sans text-xs font-bold uppercase tracking-[0.2em]">
+                  {member.role}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
